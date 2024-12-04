@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Доска сообщений</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Доска сообщений</h1>
+    <form method="POST">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="message">Ваше сообщение:</label>
+        <textarea id="message" name="message"></textarea><br><br>
+        <input type="submit" value="Отправить">
+    </form>
+    <h2>Сообщения:</h2>
+    <ul>
+    {% for message in messages %}
+        <li>{{ message.name }}: {{ message.message }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
