@@ -1,2 +1,2 @@
 # Msg board
-Just run and get fun!
+Just run and get fun!™
